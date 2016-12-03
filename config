@@ -1,0 +1,10 @@
+#!/bin/bash
+
+cd $(dirname "$0")
+ln bashrc ~/.bashrc
+ln bashrc ~/.bash_profile
+ln tmux.conf ~/.tmux.conf
+ln vimrc ~/.vimrc
+ln exrc ~/.exrc
+ls ~/.vim/bundle/Vundle.vim &>/dev/null || git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+vim +PluginInstall +qall
